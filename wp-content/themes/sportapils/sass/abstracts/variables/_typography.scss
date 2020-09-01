@@ -1,5 +1,66 @@
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_100.otf);
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_100_italic.otf);
+  font-style: italic;
+  font-weight: 100;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_300.otf);
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_300_italic.otf);
+  font-style: italic;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_500.otf);
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_500_italic.otf);
+  font-style: italic;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_700.otf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_700_italic.otf);
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_900.otf);
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: "MuseoSans";
+  src: url(fonts/MuseoSans_900_italic.otf);
+  font-style: italic;
+  font-weight: 900;
+}
 // stylelint-disable value-keyword-case
-$font__main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$font__main: "MuseoSans", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 // stylelint-enable value-keyword-case
 $font__code: monaco, consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", courier, monospace;
