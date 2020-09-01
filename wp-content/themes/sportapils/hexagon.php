@@ -1,0 +1,1 @@
+<?php /* Template Name: hexagon */?><?php wp_head(); ?><?php sportapils_post_thumbnail(); ?><div class="hexagon" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">    <div class="hexTop"></div>    <div class="hexBottom"></div></div>
