@@ -28,7 +28,7 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+    <?php echo wp_get_attachment_image(get_post_meta( get_the_ID(), 'hexagon_featured_image', true),'full'); ?>
 	<?php sportapils_post_thumbnail(); ?>
 
 	<div class="entry-content">
