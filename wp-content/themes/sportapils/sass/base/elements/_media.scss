@@ -13,3 +13,24 @@ img {
 figure {
 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
 }
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.gray-icon {
+	width: 20px;
+	height: 24px;
+	background-size: 20px 24px;
+	display: inline-block;
+	background-image: url(/wp-admin/images/gray-icon.png);
+}
+@media (min-width: $tablet) {
+	.gray-icon {
+		width: 26px;
+		height: 30px;
+		background-size: auto;
+	}
+}

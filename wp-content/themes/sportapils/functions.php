@@ -11,6 +11,8 @@ if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( '_S_VERSION', '1.0.0' );
 }
+include("widgets/widget-category.php");
+
 
 if ( ! function_exists( 'sportapils_setup' ) ) :
 	/**
@@ -204,13 +206,8 @@ function custom_postimage_meta_box_func($post){
         ?>
         <p class="custom_postimage_wrapper" id="<?php echo $meta_key; ?>_wrapper" style="margin-bottom:20px;">
             <img src="<?php echo ($image_meta_val!=''?wp_get_attachment_image_src( $image_meta_val)[0]:''); ?>" style="width:100%;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>" alt="">
-            <p class="hide-if-no-js">
-                <a class="addimage button" onclick="custom_postimage_add_image('<?php echo $meta_key; ?>');"><?php _e('add image','sportapils'); ?></a><br>
-            </p>
-            <p class="hide-if-no-js">
-                <a class="removeimage" style="color:#a00;cursor:pointer;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>" onclick="custom_postimage_remove_image('<?php echo $meta_key; ?>');"><?php _e('remove image','sportapils'); ?></a>
-            </p>
-
+            <a class="addimage button" onclick="custom_postimage_add_image('<?php echo $meta_key; ?>');"><?php _e('add image','yourdomain'); ?></a><br>
+            <a class="removeimage" style="color:#a00;cursor:pointer;display: <?php echo ($image_meta_val!=''?'block':'none'); ?>" onclick="custom_postimage_remove_image('<?php echo $meta_key; ?>');"><?php _e('remove image','yourdomain'); ?></a>
             <input type="hidden" name="<?php echo $meta_key; ?>" id="<?php echo $meta_key; ?>" value="<?php echo $image_meta_val; ?>" />
         </p>
     <?php } ?>
@@ -260,9 +257,7 @@ function custom_postimage_meta_box_func($post){
 }
 
 function custom_postimage_meta_box_save($post_id){
-
     if ( ! current_user_can( 'edit_posts', $post_id ) ){ return 'not permitted'; }
-
     if (isset( $_POST['custom_postimage_meta_box_nonce'] ) && wp_verify_nonce($_POST['custom_postimage_meta_box_nonce'],'custom_postimage_meta_box' )){
 
         //same array as in custom_postimage_meta_box_func($post)
@@ -275,4 +270,21 @@ function custom_postimage_meta_box_save($post_id){
             }
         }
     }
+}
+
+register_sidebar( array(
+    'name'          => esc_html__( 'Homepage Full Block', 'sportapils' ),
+    'id'            => 'homepage-full-block',
+    'description'   => esc_html__( 'For widgets in the homepage full block.', 'sportapils' ),
+    'before_widget' => '<div id="%1$s" class="relative %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<div class="relative"><span>',
+    'after_title'   => '</span></div>',
+) );
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+//    if (!current_user_can('administrator') && !is_admin()) {
+        show_admin_bar(false);
+//    }
 }

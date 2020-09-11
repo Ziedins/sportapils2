@@ -1,21 +1,68 @@
+.button,
 button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
+	border: 2px solid;
 	border-color: $color__border-button;
-	border-radius: 3px;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, 0.8);
+	background: transparent;
+	color: #ffffff;
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
-
+    padding: 8px 40px;
+    letter-spacing: 3px;
+    font-size: 12px;
 	&:hover {
 		border-color: $color__border-button-hover;
 	}
-
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
 	}
 }
+.menu-toggle {
+  border: none;
+  height: 74px;
+  width: 74px;
+  padding: 0;
+  background-color: #000000;
+  span {
+    background: #fff;
+    display: block;
+    position: absolute;
+    left: 28px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -ms-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    width: 23px;
+    height: 2px;
+  }
+  span:nth-child(1) {
+    top: 26px;
+  }
+  span:nth-child(2) {
+    top: 34px;
+  }
+  span:nth-child(3) {
+    top: 42px;
+  }
+}
+
+@media (min-width: $tablet) {
+  .button,
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    font-size: 16px;
+    padding: 12px 55px;
+  }
+}
+

@@ -46,7 +46,11 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'sportapils' ); ?></button>
+			<button class="menu-toggle relative" aria-controls="primary-menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -56,4 +60,5 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+        <div class="clearfix"></div>
 	</header><!-- #masthead -->
