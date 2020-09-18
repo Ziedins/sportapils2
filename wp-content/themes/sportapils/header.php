@@ -60,10 +60,15 @@
                     )
                 );
                 ?>
-                <div class="search-box">
+                <div class="search-box toggle-target">
+                    <a href="">
+                        <?php echo file_get_contents(get_template_directory_uri()."/images/search.svg"); ?>
+                    </a>
                 </div>
-                <div class="account-box">
-
+                <div class="account-box toggle-target">
+                    <a href="">
+                        <?php echo file_get_contents(get_template_directory_uri()."/images/profile.svg"); ?>
+                    </a>
                 </div>
             </nav><!-- #site-navigation -->
             <div class="clearfix"></div>

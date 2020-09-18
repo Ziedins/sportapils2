@@ -281,7 +281,19 @@ register_sidebar( array(
     'before_title'  => '<div class="relative"><span>',
     'after_title'   => '</span></div>',
 ) );
+register_sidebar( array(
+    'name'          => esc_html__( 'Footer Block', 'sportapils' ),
+    'id'            => 'footer-block',
+    'description'   => esc_html__( 'For widgets in the footer.', 'sportapils' ),
+    'before_widget' => '<div id="%1$s" class="relative %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<div class="relative"><span>',
+    'after_title'   => '</span></div>',
+) );
 add_action('after_setup_theme', 'remove_admin_bar');
+register_nav_menus( array(
+    'footer-menu' => esc_html__( 'Footer Menu', 'sportapils' )
+) );
 
 function remove_admin_bar() {
 //    if (!current_user_can('administrator') && !is_admin()) {
