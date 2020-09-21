@@ -12,6 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 include("widgets/widget-category.php");
+include("widgets/widget-category-2.php");
 
 
 if ( ! function_exists( 'sportapils_setup' ) ) :
