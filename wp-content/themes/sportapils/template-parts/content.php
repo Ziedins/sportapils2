@@ -11,7 +11,12 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+        <div class="main-title centered">
+            <div class="black-icon"></div><a class="relative" href="<?php $category = get_the_category(); $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a><span class="count relative">(<?php echo $category[0]->count; ?>)</span>
+        </div>
+
 		<?php
+
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		else :
@@ -21,10 +26,15 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-				<?php
-				sportapils_posted_on();
-				sportapils_posted_by();
-				?>
+                <div class="post-info-img left relative">
+                    <?php echo get_avatar( get_the_author_meta('email'), '75' ); ?>
+                </div><!--post-info-img-->
+                <div class="text-wrap left">
+                    <?php
+                    sportapils_posted_by();
+                    sportapils_posted_on();
+                    ?>
+                </div>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

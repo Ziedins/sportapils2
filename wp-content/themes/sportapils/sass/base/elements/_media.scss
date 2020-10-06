@@ -27,6 +27,13 @@ figure {
 	display: inline-block;
 	background-image: url(/wp-admin/images/gray-icon.png);
 }
+.black-icon {
+	width: 27px;
+	height: 31px;
+	background-size: 27px 31px;
+	display: inline-block;
+	background-image: url(/wp-admin/images/black-icon.png);
+}
 @media (min-width: $tablet) {
 	.gray-icon {
 		width: 26px;
