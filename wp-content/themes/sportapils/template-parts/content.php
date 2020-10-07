@@ -26,8 +26,9 @@
 		if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
-                <div class="post-info-img left relative">
-                    <?php echo get_avatar( get_the_author_meta('email'), '75' ); ?>
+                <div class="post-info-img left relative avatar" style="background-image: url(<?php echo get_avatar_url( get_the_author_meta('email')); ?>);">
+                    <div class="hexTop"></div>
+                    <div class="hexBottom"></div>
                 </div><!--post-info-img-->
                 <div class="text-wrap left">
                     <?php
