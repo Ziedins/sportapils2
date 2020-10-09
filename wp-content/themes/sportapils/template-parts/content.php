@@ -39,8 +39,16 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-    <?php echo wp_get_attachment_image(get_post_meta( get_the_ID(), 'hexagon_featured_image', true),'full'); ?>
-	<?php sportapils_post_thumbnail(); ?>
+    <?php $hexagon_image = wp_get_attachment_image_src(get_post_meta( get_the_ID(), 'hexagon_featured_image', true), 'full');
+    if(!$hexagon_image) $hexagon_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+    if ($hexagon_image) { ?>
+        <div class="single-hexagon" style="background-image: url(<?php echo esc_url($hexagon_image[0]); ?>);">
+    <!--    --><?php //echo wp_get_attachment_image(get_post_meta( get_the_ID(), 'hexagon_featured_image', true),'full'); ?>
+    <!--	--><?php //sportapils_post_thumbnail(); ?>
+            <div class="hexTop"></div>
+            <div class="hexBottom"></div>
+        </div>
+    <?php } ?>
 
 	<div class="entry-content">
 		<?php
