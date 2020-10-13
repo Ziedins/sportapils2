@@ -1,0 +1,1 @@
+<div class="related"><?php spRelatedPosts(); ?></div>

@@ -303,3 +303,96 @@ function remove_admin_bar() {
         show_admin_bar(false);
 //    }
 }
+// define the get_image_tag callback
+function get_image_tag_sportapils( $html, $id, $alt, $title, $align, $size ) {
+    list( $img_src, $width, $height ) = image_downsize( $id, $size );
+    $hwstring                         = image_hwstring( $width, $height );
+
+
+    $class = 'align' . esc_attr( $align ) . ' size-' . esc_attr( $size ) . ' wp-image-' . $id;
+
+    $class = apply_filters( 'get_image_tag_class', $class, $id, $align, $size );
+
+    $html = '
+    <div style="background-image: url('. esc_attr( $img_src ) . ');"  class="single-hexagon ' . $class . '" >
+        <div class="hexTop"></div>
+        <div class="hexBottom"></div>
+    </div>
+    ';
+
+   return $html;
+};
+
+// add the filter
+add_filter( 'get_image_tag', 'get_image_tag_sportapils', 10, 6 );
+
+
+// Related Posts
+if ( !function_exists( 'spRelatedPosts' ) ) {
+function spRelatedPosts() {
+    global $post;
+    $orig_post = $post;
+
+    $tags = wp_get_post_tags($post->ID);
+    if ($tags) {
+
+	$slider_exclude = esc_html(get_option('mvp_feat_posts_tags'));
+	$tag_exclude_slider = get_term_by('slug', $slider_exclude, 'post_tag');
+	$tag_id_exclude_slider =  $tag_exclude_slider->term_id;
+
+        $tag_ids = [];
+        foreach($tags as $individual_tag) {
+		$excluded_tags = [$tag_id_exclude_slider];
+      		if (in_array($individual_tag->term_id,$excluded_tags)) continue;
+ 		$tag_ids[] = $individual_tag->term_id;
+	}
+        $args = [
+            'tag__in' => $tag_ids,
+	        'order' => 'DESC',
+	        'orderby' => 'date',
+            'post__not_in' => array($post->ID),
+            'posts_per_page'=> 4,
+            'ignore_sticky_posts'=> 1
+        ];
+        $related_query = new WP_Query( $args );
+        $n = 1;
+        if( $related_query->have_posts() ) { ?>
+            <div class="hexagon-list single four relative centered">
+            <?php while( $related_query->have_posts() ) { $related_query->the_post(); ?>
+                <?php $hexagon_image = wp_get_attachment_image_src(get_post_meta( get_the_ID(), 'hexagon_featured_image', true), 'full');
+                if(!$hexagon_image) $hexagon_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                if ($hexagon_image) { ?>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"
+                   class="hexagon left <?php if ($n == 5) echo 'grey';?>"
+                   style="background-image: url(<?php echo esc_url($hexagon_image[0]); ?>);">
+                    <div class="overlay"></div>
+                    <div class="content">
+                        <div class="info">
+                            <span class="date"><?php echo get_the_date(); ?></span>
+                            <span class="author">@<?php echo get_the_author_meta('display_name');?></span>
+                        </div>
+                        <div class="title-wrapper">
+                            <span class="title"><?php echo get_the_title() ?  esc_html(wp_trim_words( the_title('', '', false), 8, ' ...' )) : the_ID(); ?></span>
+                        </div>
+                        <div class="description-wrapper">
+                                        <span class="description">
+                                            <?php echo esc_html(wp_trim_words( get_the_excerpt(), 30, ' ...' )); ?>
+                                        </span>
+                        </div>
+                    </div>
+                    <div class="hexTop">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="hexBottom">
+                        <div class="overlay"></div>
+                    </div>
+                </a>
+                <?php } $n++; ?>
+            <?php } ?>
+            </div>
+        <?php }
+    }
+    $post = $orig_post;
+    wp_reset_query();
+}
+}

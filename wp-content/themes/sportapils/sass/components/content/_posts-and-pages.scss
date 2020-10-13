@@ -2,11 +2,13 @@
 	display: block;
 }
 
+.full-top,
+.full-bottom,
 .post,
-.page {
+.page
+{
 	margin: 0 25px 1.5em;
 }
-
 .updated:not(.published) {
 	display: none;
 }
@@ -20,4 +22,13 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+@media (min-width: $tablet) {
+	.full-top,
+	.full-bottom,
+	.post,
+	.page
+	{
+		margin: 0 auto 1.5em;
+	}
 }
