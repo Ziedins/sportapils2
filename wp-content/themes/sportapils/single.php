@@ -10,74 +10,77 @@
 
 get_header();
 ?>
+    <div class="page-wrapper centered">
+        <div class="full-top">
+            <header class="entry-header">
+                <div class="main-title">
+                    <div class="black-icon"></div><a class="relative" href="<?php $category = get_the_category(); $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a><span class="count relative">(<?php echo $category[0]->count; ?>)</span>
+                </div>
 
-    <div class="full-top">
-        <header class="entry-header">
-            <div class="main-title centered">
-                <div class="black-icon"></div><a class="relative" href="<?php $category = get_the_category(); $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a><span class="count relative">(<?php echo $category[0]->count; ?>)</span>
-            </div>
+                <?php
+
+                if ( is_singular() ) :
+                    the_title( '<h1 class="entry-title">', '</h1>' );
+                else :
+                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
+
+                if ( 'post' === get_post_type() ) :
+                    ?>
+                    <div class="entry-meta">
+                        <div class="post-info-img left relative avatar" style="background-image: url(<?php echo get_avatar_url( get_the_author_meta('email')); ?>);">
+                            <div class="hexTop"></div>
+                            <div class="hexBottom"></div>
+                        </div><!--post-info-img-->
+                        <div class="text-wrap left">
+                            <?php
+                            sportapils_posted_by();
+                            sportapils_posted_on();
+                            ?>
+                        </div>
+                    </div><!-- .entry-meta -->
+                <?php endif; ?>
+            </header><!-- .entry-header -->
+            <?php $hexagon_image = wp_get_attachment_image_src(get_post_meta( get_the_ID(), 'hexagon_featured_image', true), 'full');
+            if(!$hexagon_image) $hexagon_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+            if ($hexagon_image) { ?>
+                <div class="single-hexagon main" style="background-image: url(<?php echo esc_url($hexagon_image[0]); ?>);">
+                    <div class="hexTop"></div>
+                    <div class="hexBottom"></div>
+                </div>
+            <?php } ?>
+        </div>
+        <main id="primary" class="site-main">
 
             <?php
+            while ( have_posts() ) :
+                the_post();
 
-            if ( is_singular() ) :
-                the_title( '<h1 class="entry-title">', '</h1>' );
-            else :
-                the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-            endif;
+                get_template_part( 'template-parts/content', get_post_type() );
 
-            if ( 'post' === get_post_type() ) :
-                ?>
-                <div class="entry-meta">
-                    <div class="post-info-img left relative avatar" style="background-image: url(<?php echo get_avatar_url( get_the_author_meta('email')); ?>);">
-                        <div class="hexTop"></div>
-                        <div class="hexBottom"></div>
-                    </div><!--post-info-img-->
-                    <div class="text-wrap left">
-                        <?php
-                        sportapils_posted_by();
-                        sportapils_posted_on();
-                        ?>
-                    </div>
-                </div><!-- .entry-meta -->
-            <?php endif; ?>
-        </header><!-- .entry-header -->
-        <?php $hexagon_image = wp_get_attachment_image_src(get_post_meta( get_the_ID(), 'hexagon_featured_image', true), 'full');
-        if(!$hexagon_image) $hexagon_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-        if ($hexagon_image) { ?>
-            <div class="single-hexagon main" style="background-image: url(<?php echo esc_url($hexagon_image[0]); ?>);">
-                <div class="hexTop"></div>
-                <div class="hexBottom"></div>
-            </div>
-        <?php } ?>
-    </div>
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-//			the_post_navigation(
-//				array(
-//					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'sportapils' ) . '</span> <span class="nav-title">%title</span>',
-//					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'sportapils' ) . '</span> <span class="nav-title">%title</span>',
-//				)
-//			);
+    //			the_post_navigation(
+    //				array(
+    //					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'sportapils' ) . '</span> <span class="nav-title">%title</span>',
+    //					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'sportapils' ) . '</span> <span class="nav-title">%title</span>',
+    //				)
+    //			);
 
 
-			// If comments are open or we have at least one comment, load up the comment template.
-//			if ( comments_open() || get_comments_number() ) :
-//				comments_template();
-//			endif;
+                // If comments are open or we have at least one comment, load up the comment template.
+    //			if ( comments_open() || get_comments_number() ) :
+    //				comments_template();
+    //			endif;
 
-		endwhile; // End of the loop.
-		?>
+            endwhile; // End of the loop.
+            ?>
 
-	</main><!-- #main -->
+        </main><!-- #main -->
+    <?php
+    get_sidebar();
+    ?>
     <div class="full-bottom">
         <?php get_template_part( 'template-parts/related', get_post_type() ); ?>
     </div>
+</div>
 <?php
-get_sidebar();
 get_footer();

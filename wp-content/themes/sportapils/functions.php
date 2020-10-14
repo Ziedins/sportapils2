@@ -14,6 +14,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 include("widgets/widget-category.php");
 include("widgets/widget-category-2.php");
 include("widgets/widget-category-3.php");
+include ("widgets/widget-popular-sidebar.php");
 
 
 
@@ -357,6 +358,9 @@ function spRelatedPosts() {
         $related_query = new WP_Query( $args );
         $n = 1;
         if( $related_query->have_posts() ) { ?>
+            <div class="main-title centered">
+                <div class="black-icon"></div><span class="relative"><?php echo __('Related posts', 'sportapils'); ?></span>
+            </div>
             <div class="hexagon-list single four relative centered">
             <?php while( $related_query->have_posts() ) { $related_query->the_post(); ?>
                 <?php $hexagon_image = wp_get_attachment_image_src(get_post_meta( get_the_ID(), 'hexagon_featured_image', true), 'full');

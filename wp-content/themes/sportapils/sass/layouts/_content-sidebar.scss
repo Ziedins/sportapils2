@@ -1,5 +1,5 @@
 @media (min-width: $tablet) {
-	.site {
+	.page-wrapper  {
 		display: grid;
 		grid-template-columns: auto ($size__site-sidebar);
 		grid-template-areas: "header header" "full-top full-top" "main sidebar" "full-bottom full-bottom" "footer footer";
@@ -14,7 +14,6 @@
 
 	.site-main {
 		grid-area: main;
-		overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 	}
 
 	.widget-area {
