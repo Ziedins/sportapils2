@@ -47,28 +47,36 @@
             </div><!-- .site-branding -->
 
             <nav id="site-navigation" class="main-navigation">
-                <button class="menu-toggle relative" aria-controls="primary-menu" aria-expanded="false">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'menu-1',
-                        'menu_id'        => 'primary-menu',
-                    )
-                );
-                ?>
-                <div class="search-box toggle-target">
-                    <a href="">
-                        <?php echo file_get_contents(get_template_directory_uri()."/images/search.svg"); ?>
-                    </a>
-                </div>
-                <div class="account-box toggle-target">
-                    <a href="">
-                        <?php echo file_get_contents(get_template_directory_uri()."/images/profile.svg"); ?>
-                    </a>
+                <div class="menu-wrapper toggle-target">
+                    <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-1',
+                            'menu_id'        => 'primary-menu',
+                        )
+                    );
+                    ?>
+                    <div class="search-box toggle-target">
+                        <a href="">
+                            <span class="icon search">
+                                <?php echo file_get_contents(get_template_directory_uri()."/images/search.svg"); ?>
+                            </span>
+                            <span class="text"><?php esc_html_e( 'Search', 'sportapils' ); ?></span>
+                        </a>
+                    </div>
+                    <div class="account-box toggle-target">
+                        <a href="">
+                            <span class="icon profile">
+                                <?php echo file_get_contents(get_template_directory_uri()."/images/profile.svg"); ?>
+                            </span>
+                            <span class="text"><?php esc_html_e( 'Register', 'sportapils' ); ?></span>
+                        </a>
+                    </div>
                 </div>
             </nav><!-- #site-navigation -->
             <div class="clearfix"></div>

@@ -52,7 +52,8 @@ $number = 30
         </div>
 	</footer>
 </div>
-
+<div class="overlay-trans">
+</div><!--fly-fade-->
 <?php wp_footer(); ?>
 
 </body>

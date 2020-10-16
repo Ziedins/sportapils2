@@ -96,4 +96,15 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+	// $(".fly-but-wrap").on('click', function(){
+	// 	$("#fly-wrap").toggleClass("fly-menu");
+	// 	$("#head-main-top").toggleClass("fly-content");
+	// 	$("#wallpaper").toggleClass("fly-content");
+	// 	$(".col-tabs-wrap").toggleClass("fly-content");
+	// 	$("#main-nav-wrap").toggleClass("main-nav-over");
+	// 	$("#soc-nav-wrap").toggleClass("fly-content");
+	// 	$("#body-main-wrap").toggleClass("fly-content");
+	// 	$(".fly-but-wrap").toggleClass("fly-open");
+	// 	$(".fly-fade").toggleClass("fly-fade-trans");
+	// });
 }() );
