@@ -110,39 +110,68 @@
 	display: block !important;
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: $tablet) {
+	.main-navigation {
 
-	.menu-toggle {
-		display: none;
+		.menu-toggle {
+			display: none;
+		}
+
+		.toggle-target {
+			display: block !important;
+		}
+
+		ul {
+			display: block;
+		}
+
+		.menu-wrapper {
+			padding-top: 0;
+			background: $color_dark_blue;
+			overflow: hidden;
+			position: static;
+			width: auto;
+			height: auto;
+
+			.menu-main-menu-container {
+				width: auto;
+				float: left;
+				margin: 0 10px 0 0;
+				.menu-item {
+					float: left;
+					text-transform: lowercase;
+					line-height: 126px;
+					padding: 0;
+				}
+			}
+
+			.search-box,
+			.account-box {
+				clear: none;
+				float: left;
+			}
+		}
 	}
 
-	.toggle-target {
-		display: block !important;
-	}
+	.comment-navigation,
+	.posts-navigation,
+	.post-navigation {
 
-	.main-navigation ul {
-		display: flex;
-	}
-}
+		.site-main & {
+			margin: 0 0 1.5em;
+		}
 
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
+		.nav-links {
+			display: flex;
+		}
 
-	.site-main & {
-		margin: 0 0 1.5em;
-	}
+		.nav-previous {
+			flex: 1 0 50%;
+		}
 
-	.nav-links {
-		display: flex;
-	}
-
-	.nav-previous {
-		flex: 1 0 50%;
-	}
-
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
+		.nav-next {
+			text-align: end;
+			flex: 1 0 50%;
+		}
 	}
 }
