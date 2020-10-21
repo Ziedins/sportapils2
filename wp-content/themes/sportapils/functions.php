@@ -150,6 +150,10 @@ function sportapils_scripts() {
 	wp_style_add_data( 'sportapils-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'sportapils-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'sportapils-infinitescroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', array('jquery'), _S_VERSION, true );
+    wp_enqueue_script( 'sportapils-more', get_template_directory_uri() . '/js/more.js', array('jquery'), _S_VERSION, true );
+
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -399,4 +403,44 @@ function spRelatedPosts() {
     $post = $orig_post;
     wp_reset_query();
 }
+}
+
+// Pagination
+if ( !function_exists( 'pagination' ) ) {
+    function pagination($pages = '', $range = 4)
+    {
+        $showitems = ($range * 2)+1;
+
+        global $paged;
+        if(empty($paged)) $paged = 1;
+
+        if($pages == '')
+        {
+            global $wp_query;
+            $pages = $wp_query->max_num_pages;
+            if(!$pages)
+            {
+                $pages = 1;
+            }
+        }
+
+        if(1 != $pages)
+        {
+            echo "<div class=\"pagination\"><span>".__( 'Page', 'sportapils' )." ".$paged." ".__( 'of', 'sportapils' )." ".$pages."</span>";
+            if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<a href='".get_pagenum_link(1)."'>&laquo; ".__( 'First', 'sportapils' )."</a>";
+            if($paged > 1 && $showitems < $pages) echo "<a href='".get_pagenum_link($paged - 1)."'>&lsaquo; ".__( 'Previous', 'sportapils' )."</a>";
+
+            for ($i=1; $i <= $pages; $i++)
+            {
+                if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+                {
+                    echo ($paged == $i)? "<span class=\"current\">".$i."</span>":"<a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a>";
+                }
+            }
+
+            if ($paged < $pages && $showitems < $pages) echo "<a href=\"".get_pagenum_link($paged + 1)."\">".__( 'Next', 'sportapils' )." &rsaquo;</a>";
+            if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<a href='".get_pagenum_link($pages)."'>".__( 'Last', 'sportapils' )." &raquo;</a>";
+            echo "</div>\n";
+        }
+    }
 }
