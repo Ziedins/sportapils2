@@ -151,9 +151,6 @@ function sportapils_scripts() {
 
 	wp_enqueue_script( 'sportapils-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'sportapils-infinitescroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', array('jquery'), _S_VERSION, true );
-    wp_enqueue_script( 'sportapils-more', get_template_directory_uri() . '/js/more.js', array('jquery'), _S_VERSION, true );
-
-
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -187,6 +184,11 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+/**
+ * Load Infinite Scroll file.
+ */
+require get_template_directory() . '/inc/infinite-scroll.php';
+
 
 //init the meta box
 add_action( 'after_setup_theme', 'custom_postimage_setup' );
@@ -418,6 +420,7 @@ if ( !function_exists( 'pagination' ) ) {
         {
             global $wp_query;
             $pages = $wp_query->max_num_pages;
+            var_dump($pages);die;
             if(!$pages)
             {
                 $pages = 1;
