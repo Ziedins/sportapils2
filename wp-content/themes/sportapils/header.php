@@ -62,12 +62,13 @@
                     );
                     ?>
                     <div class="search-box toggle-target">
-                        <a href="">
-                            <span class="icon search">
-                                <?php echo file_get_contents(get_template_directory_uri()."/images/search.svg"); ?>
-                            </span>
-                            <span class="text"><?php esc_html_e( 'Search', 'sportapils' ); ?></span>
-                        </a>
+                        <span class="icon search">
+                            <?php echo file_get_contents(get_template_directory_uri()."/images/search.svg"); ?>
+                        </span>
+                        <span class="text"><?php esc_html_e( 'Search', 'sportapils' ); ?></span>
+                        <div class="search-wrap">
+                            <?php get_search_form(); ?>
+                        </div>
                     </div>
                     <div class="account-box toggle-target">
                         <a href="">

@@ -151,6 +151,7 @@ function sportapils_scripts() {
 
 	wp_enqueue_script( 'sportapils-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'sportapils-infinitescroll', get_template_directory_uri() . '/js/jquery.infinitescroll.min.js', array('jquery'), _S_VERSION, true );
+    wp_enqueue_script( 'sportapils-more', get_template_directory_uri() . '/js/search.js', array('jquery'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

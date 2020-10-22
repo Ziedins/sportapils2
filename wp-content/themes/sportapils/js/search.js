@@ -1,0 +1,1 @@
+jQuery(document).ready(function($) {    $(".search-box").on('click', function(){        $(".search-wrap").slideToggle();    });});
