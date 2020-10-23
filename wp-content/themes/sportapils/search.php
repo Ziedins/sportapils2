@@ -21,7 +21,7 @@ $count = 0;
 
     <main id="primary" class="site-main">
         <div class="posts relative">
-            <header class="page-header centered">
+            <header class="page-header centered mobile">
                 <div class="gray-icon"></div>
                 <h1 class="page-title relative">
                     <?php

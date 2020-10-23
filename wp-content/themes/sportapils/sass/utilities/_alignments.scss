@@ -34,8 +34,10 @@
 	float: right;
 }
 .centered {
-	max-width: 326px;
 	margin: 0 auto;
+	&.mobile {
+		max-width: 326px;
+	}
 }
 .relative {
 	position: relative;
