@@ -6,11 +6,11 @@ msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
 "PO-Revision-Date: \n"
-"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Language: en_US\n"
 "X-Generator: Poedit 2.3.1\n"
+"Last-Translator: \n"
+"Language: en_US\n"
 
 #. Text in function
 #: sportapils/inc/template-tags.php:1
@@ -42,7 +42,7 @@ msgstr ""
 #: sportapils/widgets/widget-category-2.php:
 #: sportapils/widgets/widget-category-3.php:
 msgid "All"
-msgstr ""
+msgstr "Visi"
 
 #. Text in echo
 #: sportapils/comments.php:68
@@ -92,12 +92,16 @@ msgstr ""
 
 #. Text in echo
 #: sportapils/404.php:21
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
 #. Text in echo
 #: sportapils/template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #. Text in function
@@ -108,12 +112,12 @@ msgstr ""
 #. Text in echo
 #: sportapils/inc/infinite-scroll.php:
 msgid "Loading more posts..."
-msgstr ""
+msgstr "Ielādē rakstus"
 
 #. Text in echo
 #: sportapils/category.php: sportapils/search.php:46
 msgid "More Posts"
-msgstr ""
+msgstr "Vairāk"
 
 #. Text in echo
 #: sportapils/404.php:30
@@ -180,7 +184,8 @@ msgstr ""
 
 #. Text in function
 #: sportapils/template-parts/content-none.php:18
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #. Text in echo
@@ -191,7 +196,7 @@ msgstr ""
 #. Text in function
 #: sportapils/functions.php:369
 msgid "Related posts"
-msgstr "saistītie raksti"
+msgstr "Saistītie raksti"
 
 #. Text in echo
 #: sportapils/header.php:68
@@ -201,7 +206,7 @@ msgstr "Meklēt"
 #. Text in function
 #: sportapils/search.php:27
 msgid "Search Results for: %s"
-msgstr "Rezultāti: %s"
+msgstr "Meklēšanas rezultāti: %s"
 
 #. Text in echo
 #: sportapils/widgets/widget-category.php:
@@ -222,13 +227,15 @@ msgstr ""
 
 #. Text in echo
 #: sportapils/template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #. Text in echo
 #: sportapils/inc/infinite-scroll.php:
 msgid "Sorry, no more posts"
-msgstr ""
+msgstr "Vairāk rakstu nav"
 
 #. Text in function
 #: sportapils/widgets/widget-category.php:
@@ -288,7 +295,7 @@ msgstr "lasīt rakstu"
 #. Text in echo
 #: sportapils/searchform.php:2
 msgid "search"
-msgstr ""
+msgstr "meklēt"
 
 #. Text in echo
 #: sportapils/functions.php:231 sportapils/functions.php:233
