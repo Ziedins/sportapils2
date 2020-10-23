@@ -1,5 +1,6 @@
 @media (min-width: $tablet) {
 	.page-wrapper  {
+		max-width: 900px;
 		display: grid;
 		grid-template-columns: auto ($size__site-sidebar);
 		grid-template-areas: "header header" "full-top full-top" "main sidebar" "full-bottom full-bottom" "footer footer";
@@ -9,6 +10,7 @@
 		grid-area: header;
 	}
 	.full-top {
+		max-width: 900px;
 		grid-area: full-top;
 	}
 
@@ -20,6 +22,7 @@
 		grid-area: sidebar;
 	}
 	.full-bottom {
+		max-width: 900px;
 		grid-area: full-bottom;
 	}
 
