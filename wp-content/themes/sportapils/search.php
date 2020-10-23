@@ -21,8 +21,9 @@ $count = 0;
 
     <main id="primary" class="site-main">
         <div class="posts relative">
-            <header class="page-header">
-                <h1 class="page-title">
+            <header class="page-header centered">
+                <div class="gray-icon"></div>
+                <h1 class="page-title relative">
                     <?php
                     printf( esc_html__( 'Search Results for: %s', 'sportapils' ), '<span>' . get_search_query() . '</span>' );
                     ?>
@@ -33,7 +34,6 @@ $count = 0;
                 <?php if( $count == 1) : ?>
                     <?php get_template_part( '/template-parts/archive/initial' ); ?>
                 <?php elseif($count == 2):  ?>
-                    <div></div>
                     <div class="hexagon-list hexagon-category relative centered">
                     <?php get_template_part( '/template-parts/archive/loop' ); ?>
                 <?php else : ?>
@@ -42,10 +42,13 @@ $count = 0;
             <?php endwhile; ?>
                 </div>
                 <div class="clearfix"></div>
-                <a href="#" class="more-button"><?php _e( 'More Posts', 'sportapils' ); ?></a>
-                <div class="nav-links">
-                    <?php if (function_exists("pagination")) { pagination($wp_query->max_num_pages); } ?>
-                </div><!--nav-links-->
+                <div class="post-navigation">
+                    <a href="#" class="more-button button"><?php _e( 'More Posts', 'sportapils' ); ?></a>
+                    <div class="nav-links">
+                        <?php if (function_exists("pagination")) { pagination($wp_query->max_num_pages); } ?>
+                        <?php next_posts_link( 'Newer posts' ); ?>
+                    </div><!--nav-links-->
+                </div>
             <?php else : ?>
 
                 <!-- Posts not found Start -->

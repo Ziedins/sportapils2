@@ -1,1 +1,1 @@
-jQuery(document).ready(function($) {    $(".search-box").on('click', function(){        $(".search-wrap").slideToggle();    });});
+jQuery(document).ready(function($) {    $(".search-box").on('click', function(){        $(".search-wrap").slideToggle();    }).children(".search-wrap").click(function(e) {        return false;    });});

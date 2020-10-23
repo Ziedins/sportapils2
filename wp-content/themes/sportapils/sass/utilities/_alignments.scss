@@ -34,9 +34,14 @@
 	float: right;
 }
 .centered {
-	max-width: 900px;
+	max-width: 326px;
 	margin: 0 auto;
 }
 .relative {
 	position: relative;
+}
+@media (min-width: $tablet) {
+	.centered {
+		max-width: 900px;
+	}
 }
