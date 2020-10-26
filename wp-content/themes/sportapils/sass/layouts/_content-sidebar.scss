@@ -1,8 +1,8 @@
-@media (min-width: 972px) {
+@media (min-width: 901px) {
 	.page-wrapper  {
 		max-width: 900px;
 		display: grid;
-		grid-template-columns: auto ($size__site-sidebar);
+		grid-template-columns: calc(900px - 226px) ($size__site-sidebar);
 		grid-template-areas: "header header" "full-top full-top" "main sidebar" "full-bottom full-bottom" "footer footer";
 	}
 
