@@ -383,7 +383,7 @@ function spRelatedPosts() {
                             <span class="author">@<?php echo get_the_author_meta('display_name');?></span>
                         </div>
                         <div class="title-wrapper">
-                            <span class="title"><?php echo get_the_title() ?  esc_html(wp_trim_words( the_title('', '', false), 8, ' ...' )) : the_ID(); ?></span>
+                            <span class="title"><?php echo get_the_title() ?  esc_html(wp_trim_words( the_title('', '', false), 7, ' ...' )) : the_ID(); ?></span>
                         </div>
                         <div class="description-wrapper">
                                         <span class="description">
