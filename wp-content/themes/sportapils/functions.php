@@ -15,6 +15,7 @@ include("widgets/widget-category.php");
 include("widgets/widget-category-2.php");
 include("widgets/widget-category-3.php");
 include ("widgets/widget-popular-sidebar.php");
+include ("widgets/widget-ad.php");
 
 
 
@@ -287,6 +288,15 @@ register_sidebar( array(
     'name'          => esc_html__( 'Homepage Full Block', 'sportapils' ),
     'id'            => 'homepage-full-block',
     'description'   => esc_html__( 'For widgets in the homepage full block.', 'sportapils' ),
+    'before_widget' => '<div id="%1$s" class="relative %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<div class="relative"><span>',
+    'after_title'   => '</span></div>',
+) );
+register_sidebar( array(
+    'name'          => esc_html__( 'Post Full Block', 'sportapils' ),
+    'id'            => 'post-full-block',
+    'description'   => esc_html__( 'For widgets in the post full block.', 'sportapils' ),
     'before_widget' => '<div id="%1$s" class="relative %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<div class="relative"><span>',

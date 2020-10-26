@@ -80,6 +80,11 @@ get_header();
     ?>
     <div class="full-bottom">
         <?php get_template_part( 'template-parts/related', get_post_type() ); ?>
+        <?php
+        if ( is_active_sidebar( 'post-full-block' ) ) {
+            dynamic_sidebar( 'post-full-block' );
+        }
+        ?>
     </div>
 </div>
 <?php
