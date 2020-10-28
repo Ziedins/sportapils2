@@ -71,12 +71,18 @@
                         </div>
                     </div>
                     <div class="account-box toggle-target">
-                        <a href="">
+                            <div class="login-button lrm-login lrm-hide-if-logged-in">
                             <span class="icon profile">
                                 <?php echo file_get_contents(get_template_directory_uri()."/images/profile.svg"); ?>
                             </span>
-                            <span class="text"><?php esc_html_e( 'Register', 'sportapils' ); ?></span>
-                        </a>
+                                <span class="text"><?php esc_html_e( 'Account', 'sportapils' ); ?></span>
+                            </div>
+                            <a href="<?php echo wp_logout_url('/') ?>" class="login-button lrm-show-if-logged-in">
+                               <span class="icon profile">
+                                    <?php echo file_get_contents(get_template_directory_uri()."/images/profile.svg"); ?>
+                                </span>
+                                <span class="text"><?php esc_html_e( 'Log out', 'sportapils' ); ?></span>
+                            </a>
                     </div>
                 </div>
             </nav><!-- #site-navigation -->
