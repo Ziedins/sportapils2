@@ -26,6 +26,7 @@ $count = 0;
                 <?php if( $count == 1) : ?>
                     <?php get_template_part( '/template-parts/archive/initial' ); ?>
                 <?php elseif($count == 2):  ?>
+                    <div></div>
                     <div class="hexagon-list hexagon-category relative centered">
                     <?php get_template_part( '/template-parts/archive/loop' ); ?>
                 <?php else : ?>
