@@ -21,14 +21,6 @@ $count = 0;
 
     <main id="primary" class="site-main">
         <div class="posts relative">
-            <header class="page-header centered mobile">
-                <div class="gray-icon"></div>
-                <h1 class="page-title relative">
-                    <?php
-                    printf( esc_html__( 'Search Results for: %s', 'sportapils' ), '<span>' . get_search_query() . '</span>' );
-                    ?>
-                </h1>
-            </header>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); $count++ ?>
                 <?php set_query_var( 'count', $count );?>
                 <?php if( $count == 1) : ?>
@@ -53,7 +45,7 @@ $count = 0;
 
                 <!-- Posts not found Start -->
 
-                <div class="space-page-content-wrap relative">
+                <div class="space-page-content-wrap centered relative">
                     <div class="space-page-content page-template box-100 relative">
                         <h2><?php esc_html_e( 'Posts not found', 'sportapils' ); ?></h2>
                         <p>

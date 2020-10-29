@@ -36,7 +36,9 @@
 .centered {
 	margin: 0 auto;
 	&.mobile {
-		max-width: 326px;
+		@media (max-width: $tablet) {
+			max-width: 326px;
+		}
 	}
 }
 .relative {
