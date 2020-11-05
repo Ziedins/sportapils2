@@ -8,12 +8,13 @@
  */
 get_header();
 setup_postdata($post);
+$category = get_the_category();
 ?>
-<div class="page-wrapper centered">
+<div class="page-wrapper centered <?php if($category[0]->slug == 'karikaturas') echo 'no-image'; ?>">
     <div class="full-top">
         <header class="entry-header">
             <div class="main-title">
-                <div class="black-icon"></div><a class="relative" href="<?php $category = get_the_category(); $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a><span class="count relative">(<?php echo $category[0]->count; ?>)</span>
+                <div class="black-icon"></div><a class="relative" href="<?php $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a><span class="count relative">(<?php echo $category[0]->count; ?>)</span>
             </div>
 
             <?php
@@ -41,7 +42,7 @@ setup_postdata($post);
         </header><!-- .entry-header -->
         <?php $hexagon_image = wp_get_attachment_image_src(get_post_meta( get_the_ID(), 'hexagon_featured_image', true), 'full');
         if(!$hexagon_image) $hexagon_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
-        if ($hexagon_image) { ?>
+        if ($hexagon_image && $category[0]->slug != 'karikaturas') { ?>
             <div class="single-hexagon main" style="background-image: url(<?php echo esc_url($hexagon_image[0]); ?>);">
                 <div class="hexTop"></div>
                 <div class="hexBottom"></div>

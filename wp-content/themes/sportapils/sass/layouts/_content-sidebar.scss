@@ -4,6 +4,9 @@
 		display: grid;
 		grid-template-columns: calc(900px - 226px) ($size__site-sidebar);
 		grid-template-areas: "header header" "full-top full-top" "main sidebar" "full-bottom full-bottom" "footer footer";
+		&.no-image {
+			grid-template-areas: "header header" "full-top sidebar" "main sidebar" "full-bottom full-bottom" "footer footer";
+		}
 	}
 
 	.site-header {
