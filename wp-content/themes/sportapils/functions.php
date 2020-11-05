@@ -458,3 +458,37 @@ if ( !function_exists( 'pagination' ) ) {
         }
     }
 }
+
+//Comments
+if ( !function_exists( 'sp_comment' ) ) {
+    function sp_comment( $comment, $args, $depth ) {
+        $GLOBALS['comment'] = $comment;
+        ?>
+        <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+        <div class="comment-wrapper" id="comment-<?php comment_ID(); ?>">
+            <div class="comment-inner">
+                <div class="commentmeta">
+                    <?php printf( __( '%s ', 'sportapils'), sprintf( '<cite class="fn">@%s</cite>', get_comment_author_link() ) ); ?>
+                    <span class="date"><?php echo get_comment_date(); ?></span>
+                    <?php edit_comment_link( __( 'Edit', 'sportapils'), '(' , ')'); ?>
+                </div>
+                <div class="text">
+                    <?php if ( $comment->comment_approved == '0' ) : ?>
+                        <p class="waiting_approval"><?php esc_html_e( 'Your comment is awaiting moderation.', 'sportapils' ); ?></p>
+                    <?php endif; ?>
+                    <?php comment_text(); ?>
+                </div><!-- .text  -->
+                <div class="clear"></div>
+            </div><!-- comment-inner  -->
+        </div><!-- comment-wrapper  -->
+        <?php
+    }
+}
+
+add_filter( 'comment_form_fields', 'order_comment_form_fields' );
+
+function order_comment_form_fields( $fields ) {
+    unset($fields['comment']);
+
+    return $fields;
+}

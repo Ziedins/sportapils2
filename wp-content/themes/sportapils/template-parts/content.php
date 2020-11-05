@@ -38,5 +38,6 @@
 
 	<div class="entry-footer">
 		<?php sportapils_entry_footer(); ?>
+        <?php comments_template(); ?>
 	</div><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

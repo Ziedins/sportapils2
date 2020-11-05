@@ -1,7 +1,85 @@
-.comment-content a {
-	word-wrap: break-word;
-}
+.comments-area {
+	.comment-form-author input,
+	.comment-form-email input,
+	textarea {
+		border-radius: 0;
+		background-color: #F4F4F4;
+		border: none;
+	}
+	.comments-title {
+		color: $color__text-main;
+		margin-top: 33px;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.comment-list {
+		margin-left: 0;
+		padding-left: 0;
+		li.comment {
+			margin-bottom: 30px;
+			&::marker {
+				content: none;
+				display: none;
+			}
+			.commentmeta {
+				.fn a,
+				.fn {
+					font-size: 17px;
+					font-style: unset;
+					color: $color_blue;
+				}
+				.date {
+					color: $color_black;
+				}
+			}
+			.text,
+			.text p {
+				color: $color__text-main;
+				font-weight: 300;
+				margin: 0;
+			}
+		}
+	}
+	.comment-respond {
+		.post-header {
+			text-transform: uppercase;
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+		.comment-notes {
+			margin-top: 0;
+			font-size: 16px;
+			margin-bottom: 38px;
+		}
+		.comment-form-author,
+		.comment-form-email {
+			margin-top: 0;
+			float: left;
+			margin-bottom: 4px;
+		}
+		.comment-form-comment {
+			margin-bottom: 0;
+		}
+		.form-submit {
+			margin-top: 0;
+			.submit {
+				padding: 10px 16px;
+				border-radius: 0;
+				border: none;
+				background-color: $color_blue;
+				color: $color_white;
+				letter-spacing: 0;
+			}
+		}
+	}
+	@media (min-width: $tablet) {
+		.comment-respond {
+			.comment-form-email {
+				margin-left: 22px;
+			}
+			.comment-form-comment {
+			}
+		}
 
-.bypostauthor {
-	display: block;
+	}
 }

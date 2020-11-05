@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $sportapils_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'sportapils' ),
+					esc_html__( 'One comment', 'sportapils' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( 
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $sportapils_comment_count, 'comments title', 'sportapils' ) ),
+					esc_html( _nx( '%1$s comment', '%1$s comments', $sportapils_comment_count, 'comments title', 'sportapils' ) ),
 					number_format_i18n( $sportapils_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
@@ -52,8 +52,7 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'style'      => 'ol',
-					'short_ping' => true,
+                    'callback' => 'sp_comment'
 				)
 			);
 			?>
@@ -62,7 +61,6 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_navigation();
 
-		// If comments are closed and there are comments, let's leave a little note, shall we?
 		if ( ! comments_open() ) :
 			?>
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'sportapils' ); ?></p>
@@ -71,7 +69,30 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+    comment_form(
+        array(
+            'title_reply' => '<h4 class="post-header"><span class="post-header">' . __( 'Leave a Reply', 'sportapils' ) . '</span></h4>',
+            'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published. Required fields are marked', 'sportapils' ) . ' <span class="required">*</span></p>',
+            'fields' => [
+                'author' => '<p class="comment-form-author">
+                                <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"
+                                placeholder="'
+                                . __( 'Name *', 'sportapils') .'">
+                                </p>',
+                'email' => '<p class="comment-form-email">
+                            <input id="email" name="email" type="email" value="" size="30" maxlength="100" required="required"
+                            placeholder="'
+                            . __( 'Email *', 'sportapils') .'">
+                            </p>',
+                'cookies' => false,
+                'comment_field'        => sprintf(
+                    '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"
+                            placeholder="'
+                            . __( 'Comment *', 'sportapils') .'"></textarea>'
+                ),
+            ]
+        )
+    );
 	?>
 
 </div><!-- #comments -->
