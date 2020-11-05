@@ -3,7 +3,7 @@
 }
 
 .post,
-.page,
+.page:not(.page-template-posts),
 .full-top
 {
 	margin: 0 25px 1.5em;
