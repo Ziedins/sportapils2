@@ -1,191 +1,183 @@
+# Copyright (C) 2020 Underscores.me
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Project-Id-Version: \n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
+"Project-Id-Version: sportapils 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sportapils\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
-"Language: en_US\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-09T14:58:18+00:00\n"
+"PO-Revision-Date: 2020-11-09 17:02+0200\n"
 "X-Generator: Poedit 2.3.1\n"
+"X-Domain: sportapils\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : n"
+"%10==1 && n%100!=11 ? 1 : 2);\n"
+"Language: lv_LV\n"
 
-#. Text in function
-#: sportapils/inc/template-tags.php:1
-msgid "%1$s"
+#. Theme Name of the theme
+msgid "sportapils"
 msgstr ""
 
-#. Text in function
-#: sportapils/inc/template-tags.php:1
-msgid ", "
+#. Theme URI of the theme
+#. Author URI of the theme
+msgid "http://underscores.me/"
 msgstr ""
 
-#. Text in function
-#: sportapils/widgets/widget-category-2.php:
-msgid "2. Widget for displaying a category posts"
+#. Description of the theme
+msgid "Description"
 msgstr ""
 
-#. Text in function
-#: sportapils/widgets/widget-category-3.php:
-msgid "3. Widget for displaying a category posts"
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:1
-msgid "Add widgets here."
+#. Author of the theme
+msgid "Underscores.me"
 msgstr ""
 
 #. Text in echo
-#: sportapils/widgets/widget-category.php:
-#: sportapils/widgets/widget-category-2.php:
-#: sportapils/widgets/widget-category-3.php:
-msgid "All"
+#: 404.php:17 sportapils/404.php:17
+msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #. Text in echo
-#: sportapils/comments.php:68
-msgid "Comments are closed."
-msgstr ""
-
-#. Text in function
-#: sportapils/template-parts/content.php:14
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#. Text in function
-#: sportapils/inc/template-tags.php:1
-#: sportapils/template-parts/content-page.php:34
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:266
-msgid "Footer Block"
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:266
-msgid "Footer Menu"
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:266
-msgid "For widgets in the footer."
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:266
-msgid "For widgets in the homepage full block."
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:1
-msgid "Hexagon featured image"
-msgstr ""
-
-#. Text in function
-#: sportapils/functions.php:266
-msgid "Homepage Full Block"
+#: 404.php:21 sportapils/404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
 #. Text in echo
-#: sportapils/404.php:21
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+#: 404.php:30 sportapils/404.php:30
+msgid "Most Used Categories"
 msgstr ""
 
-#. Text in echo
-#: sportapils/template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr ""
-
+#. translators: %1$s: smiley
 #. Text in function
-#: sportapils/inc/template-tags.php:1
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+#: 404.php:48 sportapils/404.php:46
+msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
 #. Text in echo
-#: sportapils/inc/infinite-scroll.php:
-msgid "Loading more posts..."
-msgstr ""
-
-#. Text in echo
+#: category.php:39 posts.php:43 search.php:39 widgets/widget-category-2.php:147
+#: widgets/widget-category-3.php:147 widgets/widget-category.php:150
 #: sportapils/category.php: sportapils/search.php:46
 msgid "More Posts"
 msgstr ""
 
 #. Text in echo
-#: sportapils/404.php:30
-msgid "Most Used Categories"
-msgstr ""
-
-#. Text in function
-#: sportapils/single.php:55
-msgid "Next:"
-msgstr ""
-
-#. Text in echo
-#: sportapils/category.php: sportapils/search.php:60
-msgid "No posts has been found. Please return to the homepage."
-msgstr ""
-
-#. Text in echo
-#: sportapils/template-parts/content-none.php:14
-msgid "Nothing Found"
-msgstr ""
-
-#. Text in echo
-#: sportapils/widgets/widget-category.php:
-#: sportapils/widgets/widget-category-2.php:
-#: sportapils/widgets/widget-category-3.php:
-msgid "Number of post to show:"
-msgstr ""
-
-#. Text in function
-#: sportapils/comments.php:69
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
-
-#. Text in echo
-#: sportapils/404.php:17
-msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
-
-#. Text in function
-#: sportapils/template-parts/content-page.php:20
-#: sportapils/template-parts/content.php:14
-msgid "Pages:"
-msgstr ""
-
-#. Text in function
-#: sportapils/inc/template-tags.php:1
-msgid "Posted in %1$s"
-msgstr ""
-
-#. Text in echo
-#: sportapils/category.php: sportapils/search.php:58
+#: category.php:51 posts.php:55 search.php:51 sportapils/category.php:
+#: sportapils/search.php:58
 msgid "Posts not found"
 msgstr ""
 
-#. Text in function
-#: sportapils/single.php:55
-msgid "Previous:"
+#. Text in echo
+#: category.php:53 posts.php:57 search.php:53 sportapils/category.php:
+#: sportapils/search.php:60
+msgid "No posts has been found. Please return to the homepage."
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One comment"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] "%1$s koments"
+msgstr[2] "%1$s komentāri"
+
+#. Text in echo
+#: comments.php:66 sportapils/comments.php:68
+msgid "Comments are closed."
+msgstr ""
+
+#: comments.php:74
+msgid "Leave a Reply"
+msgstr ""
+
+#: comments.php:75
+msgid "Your email address will not be published. Required fields are marked"
+msgstr ""
+
+#: comments.php:81
+msgid "Name *"
+msgstr "Vārds"
+
+#: comments.php:86
+msgid "Email *"
+msgstr "Epasts *"
+
+#. Text in echo
+#: footer.php:31 sportapils/footer.php:31
+msgid "info"
+msgstr ""
+
+#. Text in echo
+#: footer.php:31 sportapils/footer.php:31
+msgid "sportapils.com"
 msgstr ""
 
 #. Text in function
-#: sportapils/functions.php:1
+#: functions.php:60 sportapils/functions.php:1
 msgid "Primary"
 msgstr ""
 
 #. Text in function
-#: sportapils/template-parts/content-none.php:18
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+#: functions.php:134 sportapils/functions.php:1
+msgid "Sidebar"
+msgstr ""
+
+#. Text in function
+#: functions.php:136 sportapils/functions.php:1
+msgid "Add widgets here."
+msgstr ""
+
+#. Text in function
+#: functions.php:207 sportapils/functions.php:1
+msgid "Hexagon featured image"
 msgstr ""
 
 #. Text in echo
-#: sportapils/header.php:78
-msgid "Register"
+#: functions.php:232 functions.php:234 sportapils/functions.php:231
+#: sportapils/functions.php:233
+msgid "select image"
+msgstr ""
+
+#. Text in function
+#: functions.php:288 sportapils/functions.php:266
+msgid "Homepage Full Block"
+msgstr ""
+
+#. Text in function
+#: functions.php:290 sportapils/functions.php:266
+msgid "For widgets in the homepage full block."
+msgstr ""
+
+#: functions.php:297
+msgid "Post Full Block"
+msgstr ""
+
+#: functions.php:299
+msgid "For widgets in the post full block."
+msgstr ""
+
+#. Text in function
+#: functions.php:306 sportapils/functions.php:266
+msgid "Footer Block"
+msgstr ""
+
+#. Text in function
+#: functions.php:308 sportapils/functions.php:266
+msgid "For widgets in the footer."
+msgstr ""
+
+#. Text in function
+#: functions.php:316 sportapils/functions.php:266
+msgid "Footer Menu"
 msgstr ""
 
 #. Text in function
@@ -193,88 +185,125 @@ msgstr ""
 msgid "Related posts"
 msgstr "saistītie raksti"
 
+#: functions.php:443
+msgid "Page"
+msgstr ""
+
+#: functions.php:443
+msgid "of"
+msgstr ""
+
+#: functions.php:444
+msgid "First"
+msgstr ""
+
+#: functions.php:445
+msgid "Previous"
+msgstr ""
+
+#: functions.php:455
+msgid "Next"
+msgstr ""
+
+#: functions.php:456
+msgid "Last"
+msgstr ""
+
+#: functions.php:471
+msgid "%s "
+msgstr ""
+
+#: functions.php:473
+msgid "Edit"
+msgstr ""
+
+#: functions.php:477
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:494
+msgid "Comment *"
+msgstr "Komentārs *"
+
+#. Text in echo
+#: header.php:26 sportapils/header.php:26
+msgid "Skip to content"
+msgstr ""
+
 #. Text in echo
 #: sportapils/header.php:68
 msgid "Search"
 msgstr "Meklēt"
 
-#. Text in function
-#: sportapils/search.php:27
-msgid "Search Results for: %s"
-msgstr "Rezultāti: %s"
-
-#. Text in echo
-#: sportapils/widgets/widget-category.php:
-#: sportapils/widgets/widget-category-2.php:
-#: sportapils/widgets/widget-category-3.php:
-msgid "Select Category:"
+#: header.php:79
+msgid "Account"
 msgstr ""
 
-#. Text in function
-#: sportapils/functions.php:1
-msgid "Sidebar"
+#: header.php:85
+msgid "Log out"
 msgstr ""
 
 #. Text in echo
-#: sportapils/header.php:26
-msgid "Skip to content"
+#: inc/infinite-scroll.php:11 sportapils/inc/infinite-scroll.php:
+msgid "Loading more posts..."
 msgstr ""
 
 #. Text in echo
-#: sportapils/template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr ""
-
-#. Text in echo
-#: sportapils/inc/infinite-scroll.php:
+#: inc/infinite-scroll.php:12 sportapils/inc/infinite-scroll.php:
 msgid "Sorry, no more posts"
 msgstr ""
 
-#. Text in function
-#: sportapils/widgets/widget-category.php:
-msgid "Sportapils category block"
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+msgctxt "post date"
+msgid "Publicēts %s"
 msgstr ""
 
-#. Text in function
-#: sportapils/widgets/widget-category-2.php:
-msgid "Sportapils category block 2."
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+msgctxt "post author"
+msgid "%s"
 msgstr ""
 
+#. translators: used between list items, there is a space after the comma
 #. Text in function
-#: sportapils/widgets/widget-category-3.php:
-msgid "Sportapils category block 3."
+#: inc/template-tags.php:63 sportapils/inc/template-tags.php:1
+msgid ", "
 msgstr ""
 
+#. translators: 1: list of categories.
 #. Text in function
-#: sportapils/widgets/widget-popular-sidebar.php:
-msgid "Sportapils popular posts sidebar"
+#: inc/template-tags.php:67 sportapils/inc/template-tags.php:1
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: 1: list of tags.
+#. Text in function
+#: inc/template-tags.php:74 sportapils/inc/template-tags.php:1
+msgid "%1$s"
+msgstr ""
+
+#. translators: %s: post title
+#. Text in function
+#: inc/template-tags.php:84 sportapils/inc/template-tags.php:1
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#. Text in function
+#: inc/template-tags.php:101 template-parts/content-page.php:39
+#: sportapils/inc/template-tags.php:1
+#: sportapils/template-parts/content-page.php:34
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
 #. Text in echo
-#: sportapils/widgets/widget-category.php:
-#: sportapils/widgets/widget-category-2.php:
-#: sportapils/widgets/widget-category-3.php:
-msgid "Title:"
+#: searchform.php:2 sportapils/searchform.php:2
+msgid "search"
 msgstr ""
 
-#. Text in function
-#: sportapils/404.php:46
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#. Text in function
-#: sportapils/widgets/widget-category.php:
-msgid "Widget for displaying a category posts"
-msgstr ""
-
-#. Text in function
-#: sportapils/widgets/widget-popular-sidebar.php:
-msgid "Widget for displaying popular posts"
-msgstr ""
-
-#. Text in echo
-#: sportapils/footer.php:31
-msgid "info"
+#: template-parts/archive/initial-all.php:9
+msgid "All Posts"
 msgstr ""
 
 #. Text in echo
@@ -285,17 +314,159 @@ msgstr ""
 msgid "read post"
 msgstr "lasīt rakstu"
 
+#. Text in function
+#: sportapils/search.php:27
+msgid "Search Results for: %s"
+msgstr "Rezultāti: %s"
+
 #. Text in echo
-#: sportapils/searchform.php:2
-msgid "search"
+#: template-parts/content-none.php:14
+#: sportapils/template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. translators: 1: link to WP admin new post page.
+#. Text in function
+#: template-parts/content-none.php:24
+#: sportapils/template-parts/content-none.php:18
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #. Text in echo
-#: sportapils/functions.php:231 sportapils/functions.php:233
-msgid "select image"
+#: template-parts/content-none.php:37
+#: sportapils/template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #. Text in echo
-#: sportapils/footer.php:31
-msgid "sportapils.com"
+#: template-parts/content-none.php:44
+#: sportapils/template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
+
+#. Text in function
+#: template-parts/content-page.php:25 template-parts/content.php:32
+#: sportapils/template-parts/content-page.php:20
+#: sportapils/template-parts/content.php:14
+msgid "Pages:"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#. Text in function
+#: template-parts/content.php:19 sportapils/template-parts/content.php:14
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: widgets/widget-ad.php:8
+msgid "Sportapils ad block"
+msgstr ""
+
+#: widgets/widget-ad.php:9
+msgid "Widget for displaying ads"
+msgstr ""
+
+#. Text in function
+#: widgets/widget-category-2.php:10 sportapils/widgets/widget-category-2.php:
+msgid "Sportapils category block 2."
+msgstr ""
+
+#. Text in function
+#: widgets/widget-category-2.php:11 sportapils/widgets/widget-category-2.php:
+msgid "2. Widget for displaying a category posts"
+msgstr ""
+
+#. Text in echo
+#: widgets/widget-category-2.php:177 widgets/widget-category-3.php:177
+#: widgets/widget-category.php:177 sportapils/widgets/widget-category.php:
+#: sportapils/widgets/widget-category-2.php:
+#: sportapils/widgets/widget-category-3.php:
+msgid "Title:"
+msgstr ""
+
+#. Text in echo
+#: widgets/widget-category-2.php:182 widgets/widget-category-3.php:182
+#: widgets/widget-category.php:179 sportapils/widgets/widget-category.php:
+#: sportapils/widgets/widget-category-2.php:
+#: sportapils/widgets/widget-category-3.php:
+msgid "Number of post to show:"
+msgstr ""
+
+#. Text in echo
+#: widgets/widget-category-2.php:188 widgets/widget-category-3.php:188
+#: widgets/widget-category.php:183 sportapils/widgets/widget-category.php:
+#: sportapils/widgets/widget-category-2.php:
+#: sportapils/widgets/widget-category-3.php:
+msgid "Select Category:"
+msgstr ""
+
+#. Text in echo
+#: widgets/widget-category-2.php:191 widgets/widget-category-3.php:191
+#: widgets/widget-category.php:185 sportapils/widgets/widget-category.php:
+#: sportapils/widgets/widget-category-2.php:
+#: sportapils/widgets/widget-category-3.php:
+msgid "All"
+msgstr ""
+
+#. Text in function
+#: widgets/widget-category-3.php:10 sportapils/widgets/widget-category-3.php:
+msgid "Sportapils category block 3."
+msgstr ""
+
+#. Text in function
+#: widgets/widget-category-3.php:11 sportapils/widgets/widget-category-3.php:
+msgid "3. Widget for displaying a category posts"
+msgstr ""
+
+#. Text in function
+#: widgets/widget-category.php:8 sportapils/widgets/widget-category.php:
+msgid "Sportapils category block"
+msgstr ""
+
+#. Text in function
+#: widgets/widget-category.php:9 sportapils/widgets/widget-category.php:
+msgid "Widget for displaying a category posts"
+msgstr ""
+
+#. Text in function
+#: widgets/widget-popular-sidebar.php:8
+#: sportapils/widgets/widget-popular-sidebar.php:
+msgid "Sportapils popular posts sidebar"
+msgstr ""
+
+#. Text in function
+#: widgets/widget-popular-sidebar.php:9
+#: sportapils/widgets/widget-popular-sidebar.php:
+msgid "Widget for displaying popular posts"
+msgstr ""
+
+#. Text in function
+#: sportapils/single.php:55
+msgid "Next:"
+msgstr ""
+
+#. Text in function
+#: sportapils/comments.php:69
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#. Text in function
+#: sportapils/single.php:55
+msgid "Previous:"
+msgstr ""
+
+#. Text in echo
+#: sportapils/header.php:78
+msgid "Register"
+msgstr ""
+
+msgctxt "comments title"
+msgid "%1$s comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] "%1$s koments"
+msgstr[2] "%1$s komentāri"

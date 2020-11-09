@@ -71,25 +71,22 @@ if ( post_password_required() ) {
 
     comment_form(
         array(
-            'title_reply' => '<h4 class="post-header"><span class="post-header">' . __( 'Leave a Reply', 'sportapils' ) . '</span></h4>',
-            'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published. Required fields are marked', 'sportapils' ) . ' <span class="required">*</span></p>',
+            'title_reply' => '<h4 class="post-header"><span class="post-header">' . __( 'Izsaki savu viedokli', 'sportapils' ) . '</span></h4>',
+            'comment_notes_before' => '<p class="comment-notes">' . __( 'Jūsu e-pasta adrese netiks publicēta. Oblikātie lauki ir atzīmēti kā', 'sportapils' ) . ' <span class="required">*</span></p>',
+            'logged_in_as' => false,
+            'label_submit' => __( 'Pievieno komentāru', 'sportapils' ),
             'fields' => [
                 'author' => '<p class="comment-form-author">
                                 <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"
                                 placeholder="'
-                                . __( 'Name *', 'sportapils') .'">
+                                . __( 'Vārds *', 'sportapils') .'">
                                 </p>',
                 'email' => '<p class="comment-form-email">
                             <input id="email" name="email" type="email" value="" size="30" maxlength="100" required="required"
                             placeholder="'
-                            . __( 'Email *', 'sportapils') .'">
+                            . __( 'Epasts *', 'sportapils') .'">
                             </p>',
                 'cookies' => false,
-                'comment_field'        => sprintf(
-                    '<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"
-                            placeholder="'
-                            . __( 'Comment *', 'sportapils') .'"></textarea>'
-                ),
             ]
         )
     );

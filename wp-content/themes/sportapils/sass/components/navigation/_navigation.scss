@@ -112,7 +112,8 @@
 
 @media screen and (min-width: $tablet) {
 	.main-navigation {
-
+		max-width: 650px;
+		max-height: 120px;
 		.menu-toggle {
 			display: none;
 		}
@@ -127,6 +128,7 @@
 
 		.menu-wrapper {
 			padding-top: 0;
+			max-height: 120px;
 			background: $color_dark_blue;
 			overflow: hidden;
 			position: static;
@@ -140,7 +142,7 @@
 				.menu-item {
 					float: left;
 					text-transform: lowercase;
-					line-height: 126px;
+					line-height: 120px;
 					padding: 0;
 				}
 			}

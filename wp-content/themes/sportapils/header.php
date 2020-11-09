@@ -28,8 +28,9 @@
 	<header id="masthead" class="site-header">
         <div class="content">
             <div class="site-branding">
+                <a href="<?php echo home_url(); ?>" title="sportapils" class="custom-logo-link"><?php echo file_get_contents(get_template_directory_uri()."/images/sp_logo_with_text.svg");?>
+                </a>
                 <?php
-                the_custom_logo();
                 if ( is_front_page() && is_home() ) :
                     ?>
                     <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>

@@ -486,9 +486,19 @@ if ( !function_exists( 'sp_comment' ) ) {
 }
 
 add_filter( 'comment_form_fields', 'order_comment_form_fields' );
-
+add_filter('comment_form_field_comment', 'test');
+function test($field) {
+    $field = sprintf(
+        '<p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"
+                            placeholder="'
+        . __( 'Komentārs *', 'sportapils') .'"></textarea></p>'
+    );
+    return $field;
+}
 function order_comment_form_fields( $fields ) {
-    unset($fields['comment']);
-
+//    var_dump($fields);die;
+    $comment_field = $fields['comment'];
+    unset( $fields['comment'] );
+    $fields['comment'] = $comment_field;
     return $fields;
 }

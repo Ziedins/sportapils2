@@ -306,3 +306,21 @@ msgstr ""
 #: sportapils/footer.php:31
 msgid "sportapils.com"
 msgstr ""
+#: comments.php:74
+msgid "Leave a Reply"
+msgstr "Izsaki savu viedokli"
+
+#: comments.php:81
+msgid "Name *"
+msgstr "Vārds *"
+
+#: comments.php:86
+msgid "Email *"
+msgstr "Epasts *"
+
+msgctxt "comments title"
+msgid "%1$s comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] "%1$s koments"
+msgstr[2] "%1$s komentāri"
