@@ -9,12 +9,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-11-09T14:58:18+00:00\n"
-"PO-Revision-Date: 2020-11-09 17:02+0200\n"
+"PO-Revision-Date: 2020-11-20 21:34+0200\n"
 "X-Generator: Poedit 2.3.1\n"
 "X-Domain: sportapils\n"
 "Last-Translator: \n"
-"Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : n"
-"%10==1 && n%100!=11 ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==0 || (n%100>=11 && n%100<=19) ? 0 : n%10==1 && n%100!=11 ? 1 : 2);\n"
 "Language: lv_LV\n"
 
 #. Theme Name of the theme
@@ -41,9 +40,7 @@ msgstr ""
 
 #. Text in echo
 #: 404.php:21 sportapils/404.php:21
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 msgstr ""
 
 #. Text in echo
@@ -304,7 +301,7 @@ msgstr ""
 
 #: template-parts/archive/initial-all.php:9
 msgid "All Posts"
-msgstr ""
+msgstr "Visi raksti"
 
 #. Text in echo
 #: sportapils/widgets/widget-category.php:
@@ -329,24 +326,19 @@ msgstr ""
 #. Text in function
 #: template-parts/content-none.php:24
 #: sportapils/template-parts/content-none.php:18
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #. Text in echo
 #: template-parts/content-none.php:37
 #: sportapils/template-parts/content-none.php:37
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 msgstr ""
 
 #. Text in echo
 #: template-parts/content-none.php:44
 #: sportapils/template-parts/content-none.php:44
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
 #. Text in function
@@ -463,10 +455,3 @@ msgstr ""
 #: sportapils/header.php:78
 msgid "Register"
 msgstr ""
-
-msgctxt "comments title"
-msgid "%1$s comment"
-msgid_plural "%1$s comments"
-msgstr[0] ""
-msgstr[1] "%1$s koments"
-msgstr[2] "%1$s komentāri"

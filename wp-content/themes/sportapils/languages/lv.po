@@ -4,15 +4,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sportapils 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sportapils\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-11-20T19:33:51+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
+"PO-Revision-Date: 2020-11-20 22:53+0200\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Domain: sportapils\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: lv\n"
 
 #. Theme Name of the theme
 msgid "sportapils"
@@ -36,7 +38,9 @@ msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
 #: 404.php:21
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
 msgstr ""
 
 #: 404.php:30
@@ -48,45 +52,32 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: author.php:39
-#: category.php:39
-#: posts.php:43
-#: search.php:39
-#: tag.php:39
-#: widgets/widget-category-2.php:147
-#: widgets/widget-category-3.php:147
+#: author.php:39 category.php:39 posts.php:43 search.php:39 tag.php:39
+#: widgets/widget-category-2.php:147 widgets/widget-category-3.php:147
 #: widgets/widget-category.php:150
 msgid "More Posts"
-msgstr ""
+msgstr "vairāk"
 
-#: author.php:51
-#: category.php:51
-#: posts.php:55
-#: search.php:51
-#: tag.php:51
+#: author.php:51 category.php:51 posts.php:55 search.php:51 tag.php:51
 msgid "Posts not found"
 msgstr ""
 
-#: author.php:53
-#: category.php:53
-#: posts.php:57
-#: search.php:53
-#: tag.php:53
+#: author.php:53 category.php:53 posts.php:57 search.php:53 tag.php:53
 msgid "No posts has been found. Please return to the homepage."
 msgstr ""
 
 #. translators: 1: title.
 #: comments.php:35
 msgid "One comment"
-msgstr ""
+msgstr "Viens koments"
 
 #. translators: 1: comment count number, 2: title.
 #: comments.php:41
 msgctxt "comments title"
 msgid "%1$s comment"
 msgid_plural "%1$s comments"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1$s koments"
+msgstr[1] "%1$s komenti"
 
 #: comments.php:66
 msgid "Comments are closed."
@@ -136,8 +127,7 @@ msgstr ""
 msgid "Hexagon featured image"
 msgstr ""
 
-#: functions.php:232
-#: functions.php:234
+#: functions.php:232 functions.php:234
 msgid "select image"
 msgstr ""
 
@@ -171,7 +161,7 @@ msgstr ""
 
 #: functions.php:379
 msgid "Related posts"
-msgstr ""
+msgstr "saistītie raksti"
 
 #: functions.php:443
 msgid "Page"
@@ -270,8 +260,7 @@ msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/template-tags.php:101
-#: template-parts/content-page.php:39
+#: inc/template-tags.php:101 template-parts/content-page.php:39
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
@@ -281,16 +270,14 @@ msgstr ""
 
 #: template-parts/archive/initial-all.php:9
 msgid "All Posts"
-msgstr "test2"
+msgstr "Visi raksti"
 
 #: template-parts/archive/initial-all.php:26
 #: template-parts/archive/initial-author.php:27
-#: template-parts/archive/initial.php:26
-#: widgets/widget-category-2.php:85
-#: widgets/widget-category-3.php:85
-#: widgets/widget-category.php:94
+#: template-parts/archive/initial.php:26 widgets/widget-category-2.php:85
+#: widgets/widget-category-3.php:85 widgets/widget-category.php:94
 msgid "read post"
-msgstr ""
+msgstr "lasīt rakstu"
 
 #: template-parts/archive/initial-author.php:10
 msgid "Autors"
@@ -306,19 +293,23 @@ msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:24
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:44
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:25
-#: template-parts/content.php:32
+#: template-parts/content-page.php:25 template-parts/content.php:32
 msgid "Pages:"
 msgstr ""
 
@@ -343,26 +334,22 @@ msgstr ""
 msgid "2. Widget for displaying a category posts"
 msgstr ""
 
-#: widgets/widget-category-2.php:177
-#: widgets/widget-category-3.php:177
+#: widgets/widget-category-2.php:177 widgets/widget-category-3.php:177
 #: widgets/widget-category.php:177
 msgid "Title:"
 msgstr ""
 
-#: widgets/widget-category-2.php:182
-#: widgets/widget-category-3.php:182
+#: widgets/widget-category-2.php:182 widgets/widget-category-3.php:182
 #: widgets/widget-category.php:179
 msgid "Number of post to show:"
 msgstr ""
 
-#: widgets/widget-category-2.php:188
-#: widgets/widget-category-3.php:188
+#: widgets/widget-category-2.php:188 widgets/widget-category-3.php:188
 #: widgets/widget-category.php:183
 msgid "Select Category:"
 msgstr ""
 
-#: widgets/widget-category-2.php:191
-#: widgets/widget-category-3.php:191
+#: widgets/widget-category-2.php:191 widgets/widget-category-3.php:191
 #: widgets/widget-category.php:185
 msgid "All"
 msgstr ""

@@ -14,7 +14,7 @@ $category = get_the_category();
     <div class="full-top">
         <header class="entry-header">
             <div class="main-title">
-                <div class="black-icon"></div><a class="relative" href="<?php $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a><span class="count relative">(<?php echo $category[0]->count; ?>)</span>
+                <div class="black-icon"></div><a class="relative" href="<?php $category_id = get_cat_ID( $category[0]->cat_name ); $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>"><?php echo esc_html($category[0]->cat_name); ?></a>
             </div>
 
             <?php
