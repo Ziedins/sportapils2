@@ -19,6 +19,17 @@ input[type="submit"] {
 	&:focus {
 		border-color: $color__border-button-focus;
 	}
+  &.colored {
+    padding: 6px 20px 6px 16px;
+    font-size: 14px;
+    letter-spacing: normal;
+    color: $color_dark_blue;
+    background-color: $color_blue;
+    border: none;
+    &.green {
+      background-color: $color_green;
+    }
+  }
 }
 .menu-toggle {
   position: absolute;
@@ -83,6 +94,23 @@ input[type="submit"] {
   input[type="submit"] {
     font-size: 16px;
     padding: 12px 55px;
+
+    &.colored {
+      padding: 6px 20px 6px 16px;
+      font-size: 14px;
+      -webkit-transition: .5s ease-in-out;
+      -moz-transition: .5s ease-in-out;
+      -ms-transition: .5s ease-in-out;
+      -o-transition: .5s ease-in-out;
+      transition: .5s ease-in-out;
+      &:hover {
+        background: transparent;
+        color: $color_blue;
+      }
+      &.green:hover {
+        color: $color_green;
+      }
+    }
   }
 }
 

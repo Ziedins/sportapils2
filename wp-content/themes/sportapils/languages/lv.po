@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-11-20T19:33:51+00:00\n"
-"PO-Revision-Date: 2020-11-20 22:53+0200\n"
+"PO-Revision-Date: 2020-11-24 14:18+0200\n"
 "X-Generator: Poedit 2.3.1\n"
 "X-Domain: sportapils\n"
 "Last-Translator: \n"
@@ -56,7 +56,7 @@ msgstr ""
 #: widgets/widget-category-2.php:147 widgets/widget-category-3.php:147
 #: widgets/widget-category.php:150
 msgid "More Posts"
-msgstr "vairāk"
+msgstr "Visi raksti"
 
 #: author.php:51 category.php:51 posts.php:55 search.php:51 tag.php:51
 msgid "Posts not found"
@@ -277,7 +277,7 @@ msgstr "Visi raksti"
 #: template-parts/archive/initial.php:26 widgets/widget-category-2.php:85
 #: widgets/widget-category-3.php:85 widgets/widget-category.php:94
 msgid "read post"
-msgstr "lasīt rakstu"
+msgstr "Lasīt rakstu"
 
 #: template-parts/archive/initial-author.php:10
 msgid "Autors"
