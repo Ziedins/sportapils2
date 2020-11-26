@@ -76,7 +76,7 @@
                             <span class="icon profile">
                                 <?php echo file_get_contents(get_template_directory_uri()."/images/profile.svg"); ?>
                             </span>
-                                <span class="text"><?php esc_html_e( 'Account', 'sportapils' ); ?></span>
+                                <span class="text"><?php esc_html_e( 'Log in', 'sportapils' ); ?></span>
                             </div>
                             <a href="<?php echo wp_logout_url('/') ?>" class="login-button lrm-show-if-logged-in">
                                <span class="icon profile">

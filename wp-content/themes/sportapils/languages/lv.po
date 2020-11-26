@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-11-20T19:33:51+00:00\n"
-"PO-Revision-Date: 2020-11-24 14:18+0200\n"
+"PO-Revision-Date: 2020-11-26 20:33+0200\n"
 "X-Generator: Poedit 2.3.1\n"
 "X-Domain: sportapils\n"
 "Last-Translator: \n"
@@ -209,15 +209,19 @@ msgstr ""
 
 #: header.php:69
 msgid "Search"
-msgstr ""
+msgstr "Meklēt"
 
 #: header.php:79
 msgid "Account"
 msgstr ""
 
+#: header.php:79
+msgid "Log in"
+msgstr "Pieslēgties"
+
 #: header.php:85
 msgid "Log out"
-msgstr ""
+msgstr "Atslēgties"
 
 #: inc/infinite-scroll.php:11
 msgid "Loading more posts..."
