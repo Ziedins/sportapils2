@@ -10,7 +10,13 @@ get_header();
 setup_postdata($post);
 $category = get_the_category();
 ?>
-<div class="page-wrapper centered <?php if($category[0]->slug == 'karikaturas') echo 'no-image'; ?>">
+<div class="page-wrapper relative centered <?php if($category[0]->slug == 'karikaturas') echo 'no-image'; ?>">
+    <div class="decoration">
+        <div class="container">
+            <?php echo file_get_contents(get_template_directory_uri()."/images/background-top.svg");?>
+            <?php echo file_get_contents(get_template_directory_uri()."/images/background-bottom.svg");?>
+        </div>
+    </div>
     <div class="full-top">
         <header class="entry-header">
             <div class="main-title">
