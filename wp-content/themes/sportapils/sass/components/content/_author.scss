@@ -1,1 +1,1 @@
-.featured.author {  .main-title {    .avatar {      top: -16px;      left: -18px;    }    h1 {      top: 25px;    }  }}
+.featured.author {  .main-title {    h1 {      top: 30px;      left: 10px;    }  }  @media (min-width: $tablet) {    .main-title {      .avatar {        top: -16px;        left: -18px;      }      h1 {        left: 0;        top: 25px;      }    }  }}
