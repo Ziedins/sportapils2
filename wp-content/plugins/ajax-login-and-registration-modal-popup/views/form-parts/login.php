@@ -73,7 +73,7 @@
 	</form>
 
 	<p class="lrm-form-bottom-message">
-        <a href="#0" class="lrm-switch-to--register"><?php esc_html_e( 'Register', 'sportapils' ); ?></a>
+        <a href="#0" class="lrm-switch-to--register"><?php esc_html_e( 'Reģistrēties', 'sportapils' ); ?></a>
         <span class="separator-line">|</span>
         <a href="#0" class="lrm-switch-to--reset-password"><?php echo lrm_setting('messages/login/forgot-password', true); ?></a>
     </p>

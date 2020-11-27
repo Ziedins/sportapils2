@@ -150,7 +150,7 @@
                 <div class="lrm-fieldset-wrap">
 
                     <div class="lrm-integrations lrm-integrations--register">
-                        <a href="#0" class="lrm-switch-to--login"><?php esc_html_e( 'Login', 'sportapils' ); ?></a>
+                        <a href="#0" class="lrm-switch-to--login"><?php esc_html_e( 'Pieslēgties', 'sportapils' ); ?></a>
                         <?php do_action( 'lrm/register_form/after' ); ?>
                     </div>
 
