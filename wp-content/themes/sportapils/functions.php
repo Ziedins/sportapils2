@@ -317,9 +317,9 @@ register_nav_menus( array(
 ) );
 
 function remove_admin_bar() {
-//    if (!current_user_can('administrator') && !is_admin()) {
+    if (!current_user_can('administrator') && !is_admin()) {
         show_admin_bar(false);
-//    }
+    }
 }
 // define the get_image_tag callback
 function get_image_tag_sportapils( $html, $id, $alt, $title, $align, $size ) {
