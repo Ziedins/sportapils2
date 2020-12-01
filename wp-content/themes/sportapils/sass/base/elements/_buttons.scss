@@ -29,6 +29,14 @@ input[type="submit"] {
     &.green {
       background-color: $color_green;
     }
+    &.pink {
+      background-color: $color_violet;
+      color: $color_white;
+    }
+    &.white {
+      background-color: $color_white;
+    }
+
   }
 }
 .menu-toggle {
@@ -109,6 +117,12 @@ input[type="submit"] {
       }
       &.green:hover {
         color: $color_green;
+      }
+      &.pink:hover {
+        color: $color_violet;
+      }
+      &.white:hover {
+        color: $color_white;
       }
     }
   }

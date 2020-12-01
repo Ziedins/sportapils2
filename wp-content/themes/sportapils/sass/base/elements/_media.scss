@@ -44,6 +44,14 @@ figure {
 	background-image: url(/wp-admin/images/colored-icon.png);
 	position: relative;
 }
+.light-icon {
+	width: 44px;
+	height: 44px;
+	background-size: 44px 44px;
+	display: inline-block;
+	background-image: url(/wp-admin/images/light-icon.png);
+	position: relative;
+}
 @media (min-width: $tablet) {
 	.gray-icon {
 		width: 26px;
