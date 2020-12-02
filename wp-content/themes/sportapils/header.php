@@ -16,7 +16,24 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
+        <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+        <meta property="og:image" content="<?php echo esc_url( $thumb['0'] ); ?>" />
+        <meta name="twitter:image" content="<?php echo esc_url( $thumb['0'] ); ?>" />
+    <?php } ?>
 
+    <?php if ( is_single() ) { ?>
+        <meta property="og:type" content="article" />
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt()); ?>" />
+            <meta name="twitter:card" content="summary">
+            <meta name="twitter:url" content="<?php the_permalink() ?>">
+            <meta name="twitter:title" content="<?php the_title(); ?>">
+            <meta name="twitter:description" content="<?php echo strip_tags(get_the_excerpt()); ?>">
+        <?php endwhile; endif; ?>
+    <?php } else { ?>
+        <meta property="og:description" content="<?php bloginfo('description'); ?>" />
+    <?php } ?>
 	<?php wp_head(); ?>
 </head>
 
