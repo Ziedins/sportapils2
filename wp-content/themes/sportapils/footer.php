@@ -19,14 +19,25 @@ $number = 30
                     </a>
                 </div>
                 <div class="socials relative">
-                    <a href="<?php echo home_url(); ?>" title="instagram" class="instagram"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_inst.svg");?>
-                    </a>
-                    <a href="<?php echo home_url(); ?>" title="facebook" class="facebook"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_fb.svg");?>
-                    </a>
-                    <a href="<?php echo home_url(); ?>" title="twitter" class="twitter"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_tv.svg");?>
-                    </a>
-                    <a href="<?php echo home_url(); ?>" title="whatsapp" class="whatsapp"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_whatsapp.svg");?>
-                    </a>
+
+
+
+                    <?php if(get_option('instagram_url')) { ?>
+                        <a href="<?php echo get_option('instagram_url'); ?>" title="instagram" class="instagram"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_inst.svg");?>
+                        </a>
+                    <?php } ?>
+                    <?php if(get_option('facebook_url')) { ?>
+                        <a href="<?php echo get_option('facebook_url'); ?>" title="facebook" class="facebook"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_fb.svg");?>
+                        </a>
+                    <?php } ?>
+                    <?php if(get_option('twitter_url')) { ?>
+                        <a href="<?php echo get_option('twitter_url'); ?>" title="twitter" class="twitter"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_tv.svg");?>
+                        </a>
+                    <?php } ?>
+                    <?php if(get_option('whatsapp_url')) { ?>
+                        <a href="<?php echo get_option('whatsapp_url'); ?>" title="whatsapp" class="whatsapp"><?php echo file_get_contents(get_template_directory_uri()."/images/soc_whatsapp.svg");?>
+                        </a>
+                    <?php } ?>
                     <div class="clearfix"></div>
                     <a class="email" href="mailto:info@sportapils.com"><?php esc_html_e( 'info', 'sportapils' ); ?><span class="green">@</span><?php esc_html_e( 'sportapils.com', 'sportapils' ); ?></a>
                 </div>
