@@ -342,7 +342,7 @@ function get_image_tag_sportapils( $html, $id, $alt, $title, $align, $size ) {
 };
 
 // add the filter
-add_filter( 'get_image_tag', 'get_image_tag_sportapils', 10, 6 );
+//add_filter( 'get_image_tag', 'get_image_tag_sportapils', 10, 6 );
 
 
 // Related Posts
