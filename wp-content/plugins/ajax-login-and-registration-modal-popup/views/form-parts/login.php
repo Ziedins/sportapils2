@@ -52,6 +52,13 @@
 			<button class="full-width has-padding" type="submit">
 				<?php echo lrm_setting('messages/login/button', true); ?>
 			</button>
+            <a class="button-facebook" href="https://sportapils.com/wp-login.php?loginSocial=facebook" data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="facebook" data-popupwidth="475" data-popupheight="175">
+                <?php esc_html_e( 'Autorizēties ar Facebook', 'sportapils' ); ?>
+            </a>
+            <a class="button-google" href="https://sportapils.com/wp-login.php?loginSocial=google" data-plugin="nsl" data-action="connect" data-redirect="current" data-provider="google" data-popupwidth="600" data-popupheight="600">
+                <?php esc_html_e( 'Autorizēties ar Google', 'sportapils' ); ?>
+            </a>
+
 		</div>
 
         <div class="lrm-fieldset-wrap">
