@@ -72,7 +72,7 @@ if ( post_password_required() ) {
     comment_form(
         array(
             'title_reply' => '<h4 class="post-header"><span class="post-header">' . __( 'Izsaki savu viedokli', 'sportapils' ) . '</span></h4>',
-            'comment_notes_before' => '<p class="comment-notes">' . __( 'Jūsu e-pasta adrese netiks publicēta. Oblikātie lauki ir atzīmēti kā', 'sportapils' ) . ' <span class="required">*</span></p>',
+            'comment_notes_before' => '<p class="comment-notes">' . __( 'Jūsu e-pasta adrese netiks publicēta. Obligātie lauki ir atzīmēti kā', 'sportapils' ) . ' <span class="required">*</span></p>',
             'logged_in_as' => false,
             'label_submit' => __( 'Pievieno komentāru', 'sportapils' ),
             'fields' => [
