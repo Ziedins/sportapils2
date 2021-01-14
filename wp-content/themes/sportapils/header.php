@@ -16,11 +16,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <?php if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
-        <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
-        <meta property="og:image" content="<?php echo esc_url( $thumb['0'] ); ?>" />
-        <meta name="twitter:image" content="<?php echo esc_url( $thumb['0'] ); ?>" />
-    <?php } ?>
+<!--    --><?php //if (  (function_exists('has_post_thumbnail')) && (has_post_thumbnail())  ) { ?>
+<!--        --><?php //$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+<!--        <meta property="og:image" content="--><?php //echo esc_url( $thumb['0'] ); ?><!--" />-->
+<!--        <meta name="twitter:image" content="--><?php //echo esc_url( $thumb['0'] ); ?><!--" />-->
+<!--    --><?php //} ?>
 
     <?php if ( is_single() ) { ?>
         <meta property="og:type" content="article" />
