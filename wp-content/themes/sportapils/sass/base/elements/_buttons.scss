@@ -82,7 +82,7 @@ input[type="submit"] {
     top: 42px;
   }
   &[aria-expanded="true"] {
-    background-color: $color_dark_blue;
+    background-color: $color_black;
     span:nth-child(2) {
       left: 22px;
       top: 34px;
