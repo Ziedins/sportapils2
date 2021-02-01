@@ -22,6 +22,17 @@
 <!--        <meta name="twitter:image" content="--><?php //echo esc_url( $thumb['0'] ); ?><!--" />-->
 <!--    --><?php //} ?>
 
+    <!-- fb image -->
+    <?php 
+        if(!has_post_thumbnail( $post->ID )) { 
+            echo '<meta property="og:image" content="' . $default_image . '"/>';
+        } else{
+            $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+            echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+        }
+    ?> 
+    <!-- / fb image -->
+
     <?php if ( is_single() ) { ?>
         <meta property="og:type" content="article" />
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
