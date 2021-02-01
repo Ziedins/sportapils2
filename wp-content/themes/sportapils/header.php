@@ -25,6 +25,7 @@
     <!-- fb image -->
     <?php 
         if(!has_post_thumbnail( $post->ID )) { 
+            $default_image="https://sportapils.com/wp-content/uploads/2021/02/sportapils_logo.png";
             echo '<meta property="og:image" content="' . $default_image . '"/>';
         } else{
             $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
