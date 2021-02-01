@@ -97,6 +97,10 @@
 			margin-top: 0;
 		}
 	}
+
+	&.toggled .menu-toggle {
+		position: fixed;
+	}
 }
 
 /* Small menu. */
@@ -105,6 +109,9 @@
 }
 .menu-toggle {
 	display: block;
+	&:focus {
+		outline: none;
+	}
 }
 .main-navigation.toggled ul,.main-navigation.toggled .toggle-target {
 	display: block !important;
