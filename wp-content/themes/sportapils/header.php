@@ -22,17 +22,15 @@
 <!--        <meta name="twitter:image" content="--><?php //echo esc_url( $thumb['0'] ); ?><!--" />-->
 <!--    --><?php //} ?>
 
-    <!-- fb image -->
     <?php 
         if(!has_post_thumbnail( $post->ID )) { 
             $default_image="https://sportapils.com/wp-content/uploads/2021/02/sportapils_logo.png";
             echo '<meta property="og:image" content="' . $default_image . '"/>';
         } else{
-            $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+            $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'facebook-thumbnail' );
             echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
         }
     ?> 
-    <!-- / fb image -->
 
     <?php if ( is_single() ) { ?>
         <meta property="og:type" content="article" />
