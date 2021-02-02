@@ -31,6 +31,7 @@
             echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
         }
     ?> 
+    <meta property="fb:app_id" content="3959776510753985" />
 
     <?php if ( is_single() ) { ?>
         <meta property="og:type" content="article" />
