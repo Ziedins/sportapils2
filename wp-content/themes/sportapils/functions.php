@@ -16,7 +16,7 @@ include("widgets/widget-category-2.php");
 include("widgets/widget-category-3.php");
 include ("widgets/widget-popular-sidebar.php");
 include ("widgets/widget-ad.php");
-
+include ("widgets/widget-tabs.php");
 
 
 if ( ! function_exists( 'sportapils_setup' ) ) :

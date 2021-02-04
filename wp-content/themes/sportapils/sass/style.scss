@@ -84,6 +84,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "components/components";
 
+
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -95,6 +97,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
+@import "utilities/functions";
 
 /* Accessibility
 --------------------------------------------- */
