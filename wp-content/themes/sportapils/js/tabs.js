@@ -53,4 +53,7 @@
 	  listTabs[i].addEventListener("click", listTabClicks)
 	}
 
+	// remove first button in favor of tabs
+	document.querySelectorAll('.posts .button-wrapper.list')[0].remove();
+
 }() );
