@@ -54,6 +54,7 @@
 	}
 
 	// remove first button in favor of tabs
-	document.querySelectorAll('.posts .button-wrapper.list')[0].remove();
+	const tabs = document.querySelectorAll('.list-tabs');
+	tabs[0].previousElementSibling.querySelector('.button-wrapper.list').classList.add('paginate-links');
 
 }() );
