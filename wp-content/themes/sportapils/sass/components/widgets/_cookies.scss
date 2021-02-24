@@ -41,12 +41,15 @@
     background: #C7F639;
     color: #000;
     border: none;
-    border-radius: 2px;
     margin: 0 20px;
     font-size: 14px;
     cursor: pointer;
     letter-spacing: normal;
-    padding: 10px 25px;
+    padding: 6px 20px 6px 16px;
+    &:hover {
+      background-color: #9cc12d;
+      transition: .5s ease-in-out;
+    }
   }
 
   .button-container {
