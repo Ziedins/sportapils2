@@ -11,11 +11,11 @@
 $number = 30
 ?>
 
-	<footer class="site-footer">
+    <footer class="site-footer">
         <div class="footer-inner-wrap">
             <div class="left-wrap">
                 <div class="site-info">
-                    <a href="<?php echo home_url(); ?>" title="Sportapils" class="logo relative"><?php echo file_get_contents(get_template_directory_uri()."/images/logo-label.svg");?>
+                    <a href="<?php echo home_url(); ?>" title="Sportapils" class="logo relative"><?php echo file_get_contents(get_template_directory_uri()."/images/sp_logo_with_text.svg");?>
                     </a>
                 </div>
                 <div class="socials relative">
@@ -61,7 +61,19 @@ $number = 30
             </div>
             <div class="clearfix"></div>
         </div>
-	</footer>
+    </footer>
+<?php if(get_option('cookie_policy')) { ?>
+  <div id="cookie-policy" class="hidden">
+    <div class="container">
+      <div class="text">
+        <?php echo get_option('cookie_policy'); ?>
+      </div>
+      <div class="button-container">
+        <button type="button" id="cookieAgree">Apstiprinu</button>
+      </div>
+    </div>
+  </div>
+<?php } ?>
 </div>
 <div class="overlay-trans">
 </div><!--fly-fade-->
